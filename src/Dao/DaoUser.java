@@ -35,11 +35,13 @@ public class DaoUser extends conexionSQL implements IDaoUser {
     @Override
     public boolean createUser(ModeloUsuario usuario) {
         String sql = "INSERT INTO " + env.T_USER + "("
-                + env.NOMBRE_USER + "," + env.PASSWORD + ") VALUES (?, ?)";
+                + env.NOMBRE_USER + "," + env.LASTNAME_USER +","+env.EMAIL_USER+","+env.PASSWORD_USER+") VALUES (?, ?, ?, ?)";
         try {
             PreparedStatement ps = getConnection().prepareStatement(sql);
             ps.setString(1, usuario.getNombre_usuario());
-            ps.setString(2, usuario.getPass_usuario());
+            ps.setString(2, usuario.getApellido_usuario());
+            ps.setString(3, usuario.getEmail_usuario());
+            ps.setString(4, usuario.getPass_usuario());
             ps.executeUpdate();
             System.out.println("Creado con exito");
             return true;

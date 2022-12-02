@@ -1,5 +1,6 @@
 package Controladores;
 
+import Vistas.VistaDiagnostico;
 import Vistas.Vistamodulos;
 
 public class ControladorModulos {
@@ -12,7 +13,13 @@ public class ControladorModulos {
     }
 
     public static void hidden() {
-        vistamodulos.setVisible(false);
+        //vistamodulos.setVisible(false);
+        vistamodulos.dispose();
     }
-    
+
+    public static void exit() {
+        hidden();
+        ControladorLogout.visible();
+    }
+
 }

@@ -4,10 +4,25 @@
  */
 package Controladores;
 
+import Vistas.VistaDiagnostico;
+
 /**
  *
  * @author poseidon
  */
 public class ControladorDiagnostico {
+
+    static VistaDiagnostico vistadiagnostico = new VistaDiagnostico();
+
+    public static void hidden() {
+        //vistamodulos.setVisible(false);
+        vistadiagnostico.dispose();
+    }
+
+    public static void exit() {
+        hidden();
+        ControladorLogout.visible();
+    }
+
     
 }

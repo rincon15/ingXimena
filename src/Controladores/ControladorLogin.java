@@ -10,7 +10,6 @@ import javax.swing.JOptionPane;
 public class ControladorLogin {
 
     static Vistalogin vistalogin = new Vistalogin();
-
     static ModeloUsuario modeloUsuario = new ModeloUsuario();
 
     public static void inicio() {
@@ -19,7 +18,12 @@ public class ControladorLogin {
      public static void hidden() {
         vistalogin.setVisible(false);
     }
-
+     
+    
+    public static void btn_registrar(){
+        ControladorCreate.inicio();
+    } 
+     
     public static void btn_entrar() {
         String email = vistalogin.getEmail().getText();
         String pass = vistalogin.getPassword().getText();

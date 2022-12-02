@@ -11,8 +11,10 @@ public class env {
     
     //Tabla User
     public static final String T_USER="usuario";
-    public static final String ID_USER= "id_usuario	";
+    public static final String ID_USER= "id_usuario";
     public static final String NOMBRE_USER="nombre_usuario";
+    public static final String LASTNAME_USER="apellido_usuario";
+    public static final String EMAIL_USER="email_usuario";
     public static final String PASSWORD_USER="pass_usuario";
 
 }
